@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* VARIABLES */
+:root {
+    --white-color: rgb(240, 240, 240);
+    --white-color-darker: rgb(228, 228, 228);
+    --white-color-lighter: rgb(255, 255, 255);
+}
+
+/* COMMON */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+}
+
+.filter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+    z-index: -5;
+}
+
+.linear-slide {
+    background: linear-gradient(145deg, #fff 40%, #fd297a, #9424f0, #fff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: linearSlide 1.75s linear forwards;
+    animation-delay: 0.75s;
+}
+
+.hidden {
+    display: none;
+}
+
+/* DELETE LI */
+.delete-btn i {
+    pointer-events: none;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 80px;
+}
+
+.header__container {
+    width: 100%;
+    height: 90%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+}
+
+.header__container #clock {
+    color: var(--white-color);
+    font-size: 40px;
+}
+
+.header__container #weather {
+    color: var(--white-color);
+    font-size: 22px;
+}
+
+.header__container #weather span {
+    margin: 0 8px;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+/* SECTION 1 */
+.section1 {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section1__container {
+    width: 40%;
+    height: 100%;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section1__container form {
+    width: 70%;
+}
+
+.section1__container .form {
+    animation: fadeIn 1.75s ease-out both;
+}
+
+.greeting__container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    display: none;
+    animation: fadeIn 1.75s ease-out both;
+}
+
+.greeting__container #greeting {
+    width: 100%;
+    font-size: 40px;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+/* SECTION 2 */
+.section2 {
+    max-width: 40%;
+    height: 100px;
+    margin-left: 130px;
+}
+
+.section2 .quote {
+    color: var(--white-color-darker);
+    width: 100%;
+    display: inline-block;
+}
+
+.quote span {
+    display: inline-block;
+    opacity: 0;
+}
+
+.quote span:first-child {
+    font-size: 22px;
+    animation: fadeIn 1.75s ease-out both;
+    animation-delay: 0.5s;
+}
+.quote span:last-child {
+    font-size: 18px;
+    color: var(--white-color);
+    margin: 12px 0 0 28px;
+    animation: fadeIn 1.75s ease-out both;
+    animation-delay: 1s;
+}
+
+/* SECTION 3 */
+.section3 {
+    width: 400px;
+    height: 380px;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    animation: slideInTodo 1s ease-out both;
+    animation-delay: 1.75s;
+}
+
+.section3 .todo__container {
+    margin: 8px 12px;
+    width: 100%;
+}
+
+.todo__container #todo-list {
+    color: var(--white-color);
+    margin-left: 20px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(10%);
+    animation: fadeInTodo 1.75s ease-out forwards;
+    animation-delay: 2s;
+}
+
+#todo-list .todo-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.75s ease;
+    transform: translateX(10%);
+    animation: slideInTodo 1.25s ease-out forwards;
+}
+
+.fade-away {
+    opacity: 1 !important;
+    transform: translateX(0%) !important;
+    animation: fadeOutTodo 1.75s ease-out forwards !important;
+}
+
+#todo-list .todo-item span {
+    margin-right: 12px;
+    min-width: 40px;
+}
+
+#todo-list .todo-item .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.delete-btn:hover {
+    opacity: 0.8;
+}
+
+/* LOG OUT */
+.log-out {
+    width: 135px;
+    height: 100px;
+    position: absolute;
+    bottom: 12px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.log-out__button {
+    left: 0;
+}
+
+.log-out__icon {
+    color: var(--white-color-darker);
+    font-size: 16px;
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+.log-out__button:hover + .log-out__icon {
+    transform: translateX(0px);
+    opacity: 1;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/input.css" />
+        <link rel="stylesheet" href="./css/button.css" />
+        <link rel="stylesheet" href="./css/animation.css">
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="icon" href="./fav/favicon_io/android-chrome-192x192.png">
+        <title>Todo App</title>
+    </head>
+    <body>
+        <div class="filter"></div>
+
+        <!-- HEADER -->
+        <header>
+            <!-- Clock -->
+            <div class="header__container">
+                <h2 id="clock"></h2>
+                <!-- Weather -->
+                <div id="weather">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <!-- SECTION 1 -->
+            <section class="section1">
+                <div class="section1__container">
+                    <!-- Greeting -->
+                    <form id="user-form" class="hidden">
+                        <div class="form">
+                            <input
+                            title="Hello! What's your name ?"
+                            type="text"
+                            class="enter-name"
+                            name="name"
+                            autocomplete="off"
+                            required
+                            maxlength="20"
+                            />
+                            <label for="name" class="label-name">
+                                <span class="content-name">Name</span>
+                            </label>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Log in" />
+                        </div>
+                    </form>
+                    <div class="greeting__container">
+                    <div id="greeting" class="linear-slide"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 -->       
+        <section class="section2">
+            <!-- Quotes -->
+            <div id="quote" class="quote">
+                <span></span></br>
+                <span></span>
+            </div>
+        </section>
+        
+        <!-- SECTION 3 -->
+        <section class="section3">
+            <!-- Todo List -->
+            <div class="todo__container">
+                <form id="todo-form">
+                    <div class="form">
+                        <input title="Tell me what you wanna do today!" type="text" required name="todo" autocomplete="off" maxlength="20"/>
+                        <label for="todo" class="label-name">
+                            <span class="content-name">Todo...?</span>
+                        </label>
+                    </div>
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <div class="log-out">
+        <div class="log-out__button button">
+            <input type="submit" value="Log out">
+        </div>
+        <i class="linear-slide log-out__icon fa-solid fa-arrow-right-from-bracket"></i>
+    </div>
+    
+        <script src="./js/greeting.js"></script>
+        <script src="./js/clock.js"></script>
+        <script src="./js/bgImages.js"></script>
+        <script src="./js/quotes.js"></script>
+        <script src="./js/todoList.js"></script>
+        <script src="./js/weather.js"></script>
+        <script src="./js/logOut.js"></script>
+    </body>
+    </html>
+    

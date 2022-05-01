@@ -1,0 +1,55 @@
+.button {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-out both;
+    animation-delay: 0.5s;
+    cursor: pointer;
+}
+
+.button input {
+    color: var(--white-color-darker);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.button::after,
+.button::before {
+    border: 3px solid var(--white-color);
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.button:hover input {
+    color: var(--white-color-lighter);
+}
+
+.button:hover::after {
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left top, #fd297a, #9424f0);
+    transform: translate(-4px, -4px);
+}
+
+.button:hover::before {
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom right, #fd297a, #9424f0);
+    transform: translate(4px, 4px);
+}
