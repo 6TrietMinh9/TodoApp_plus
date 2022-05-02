@@ -17,7 +17,7 @@
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 2rem;
     padding: 8px 18px;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -43,13 +43,13 @@
 .button:hover::after {
     border: 3px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to left top, #fd297a, #9424f0);
+    border-image-source: linear-gradient(to left top, var(--gradient1), var(--gradient2));
     transform: translate(-4px, -4px);
 }
 
 .button:hover::before {
     border: 3px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to bottom right, #fd297a, #9424f0);
+    border-image-source: linear-gradient(to bottom right, var(--gradient1), var(--gradient2));
     transform: translate(4px, 4px);
 }
