@@ -220,8 +220,6 @@ main {
 }
 
 .fade-away {
-    opacity: 1 !important;
-    transform: translateX(0%) !important;
     animation: fadeOutTodo 1.75s ease-out forwards !important;
 }
 
